@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed `UserMessageWithAttachments` typing to match the actual pi-ai message content schema and restored the example app's type checking against source exports
+
 ## [0.65.0] - 2026-04-03
 
 ## [0.64.0] - 2026-03-29

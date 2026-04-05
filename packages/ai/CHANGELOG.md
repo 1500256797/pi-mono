@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Refreshed generated model metadata, including new Google `gemma-4-26b` and `gemma-4-31b` model entries plus upstream catalog updates for routed models
+
 ### Fixed
 
 - Fixed OpenAI-compatible completions streaming usage to preserve `prompt_tokens_details.cache_write_tokens` and normalize OpenRouter `cached_tokens` to previous-request cache hits only, preventing cache read/write double counting in `usage` and cost calculation ([#2802](https://github.com/badlogic/pi-mono/issues/2802))
