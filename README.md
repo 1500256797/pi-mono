@@ -35,13 +35,13 @@ Tools for building AI agents and managing LLM deployments.
 
 | Package | Description |
 |---------|-------------|
-| **[@mariozechner/pi-ai](packages/ai)** | Unified multi-provider LLM API (OpenAI, Anthropic, Google, etc.) |
-| **[@mariozechner/pi-agent-core](packages/agent)** | Agent runtime with tool calling and state management |
-| **[@mariozechner/pi-coding-agent](packages/coding-agent)** | Interactive coding agent CLI |
-| **[@mariozechner/pi-mom](packages/mom)** | Slack bot that delegates messages to the pi coding agent |
-| **[@mariozechner/pi-tui](packages/tui)** | Terminal UI library with differential rendering |
-| **[@mariozechner/pi-web-ui](packages/web-ui)** | Web components for AI chat interfaces |
-| **[@mariozechner/pi-pods](packages/pods)** | CLI for managing vLLM deployments on GPU pods |
+| **[@ouhuang/pi-ai](packages/ai)** | Unified multi-provider LLM API (OpenAI, Anthropic, Google, etc.) |
+| **[@ouhuang/pi-agent-core](packages/agent)** | Agent runtime with tool calling and state management |
+| **[@ouhuang/pi-coding-agent](packages/coding-agent)** | Interactive coding agent CLI |
+| **[@ouhuang/pi-mom](packages/mom)** | Slack bot that delegates messages to the pi coding agent |
+| **[@ouhuang/pi-tui](packages/tui)** | Terminal UI library with differential rendering |
+| **[@ouhuang/pi-web-ui](packages/web-ui)** | Web components for AI chat interfaces |
+| **[@ouhuang/pi-pods](packages/pods)** | CLI for managing vLLM deployments on GPU pods |
 
 ## Contributing
 

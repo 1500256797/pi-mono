@@ -290,8 +290,8 @@
 - **`createStreamFn`**: Creates a stream function with CORS proxy support. Reads proxy settings on each call for dynamic configuration.
 
 - **Default `streamFn` and `getApiKey`**: `AgentInterface` now sets sensible defaults if not provided:
-  - `streamFn`: Uses `createStreamFn` with proxy settings from storage
-  - `getApiKey`: Reads from `providerKeys` storage
+    - `streamFn`: Uses `createStreamFn` with proxy settings from storage
+    - `getApiKey`: Reads from `providerKeys` storage
 
 - **Proxy utilities exported**: `applyProxyIfNeeded`, `shouldUseProxyForProvider`, `isCorsError`, `createStreamFn`
 
@@ -308,6 +308,7 @@
 ### Migration Guide
 
 **Before (0.30.x):**
+
 ```typescript
 import { Agent, ProviderTransport, type AppMessage } from '@mariozechner/pi-web-ui';
 
@@ -318,32 +319,34 @@ const agent = new Agent({
 ```
 
 **After:**
+
 ```typescript
-import { Agent, type AgentMessage } from '@mariozechner/pi-agent-core';
-import { defaultConvertToLlm } from '@mariozechner/pi-web-ui';
+import { Agent, type AgentMessage } from '@mariozechner/pi-agent-core'
+import { defaultConvertToLlm } from '@mariozechner/pi-web-ui'
 
 const agent = new Agent({
-  convertToLlm: (messages: AgentMessage[]) => {
-    // Extend defaultConvertToLlm for custom types
-    return defaultConvertToLlm(messages);
-  }
-});
+	convertToLlm: (messages: AgentMessage[]) => {
+		// Extend defaultConvertToLlm for custom types
+		return defaultConvertToLlm(messages)
+	},
+})
 // AgentInterface will set streamFn and getApiKey defaults automatically
 ```
 
 **Custom message types:**
+
 ```typescript
 // Before: declaration merging on CustomMessages
-declare module "@mariozechner/pi-web-ui" {
-  interface CustomMessages {
-    "my-message": MyMessage;
-  }
+declare module '@mariozechner/pi-web-ui' {
+	interface CustomMessages {
+		'my-message': MyMessage
+	}
 }
 
 // After: declaration merging on CustomAgentMessages
-declare module "@mariozechner/pi-agent-core" {
-  interface CustomAgentMessages {
-    "my-message": MyMessage;
-  }
+declare module '@mariozechner/pi-agent-core' {
+	interface CustomAgentMessages {
+		'my-message': MyMessage
+	}
 }
 ```

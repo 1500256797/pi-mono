@@ -13,6 +13,12 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
+    "baseUrl": ".",
+    "paths": {
+      "@ouhuang/pi-agent-core": ["../agent/dist/index.d.ts"],
+      "@ouhuang/pi-ai": ["../ai/dist/index.d.ts"],
+      "@ouhuang/pi-tui": ["../tui/dist/index.d.ts"]
+    },
     "rootDir": "./src",
     "outDir": "./dist"
   },
